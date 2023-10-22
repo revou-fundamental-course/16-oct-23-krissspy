@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Course</title>
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+<body>
+    <header class="header">
+        <div class="nav-logo">
+            <img src="./asset/revou.png" alt="revou-logo">
+        </div>
+        <nav class="nav">
+            <a href="#" class="nav-item">Home</a>
+            <a href="#" class="nav-item">Our Profile</a>
+            <a href="#" class="nav-item">Portfolio</a>
+            <a href="#message-us" class="nav-item">Message Us</a>
+        </nav>
+    </header>
+    <section class="banner">
+        <div class="greetings">
+            <h1>Hi, My Name Is Krisna</h1>
+            <p>Ini adalah latihan website pertama saya.</p>
+        </div>
+    </section>
+    <section class="headquarters">
+        <h1>Our Headquarters</h1>
+        <div class="tutor-list">
+            <div class="kartu-tutor">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Chris_Hemsworth_by_Gage_Skidmore_2_%28cropped%29.jpg/220px-Chris_Hemsworth_by_Gage_Skidmore_2_%28cropped%29.jpg"/>
+                <p> chriss</p>
+            </div>
+            <div class="kartu-tutor">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Scarlett_Johansson_by_Gage_Skidmore_2_%28cropped%2C_2%29.jpg/220px-Scarlett_Johansson_by_Gage_Skidmore_2_%28cropped%2C_2%29.jpg"/>
+                <p> scarlet</p>
+            </div>
+            <div class="kartu-tutor">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Robert_Downey_Jr_2014_Comic_Con_%28cropped%29.jpg/220px-Robert_Downey_Jr_2014_Comic_Con_%28cropped%29.jpg"/>
+                <p> ironman</p>
+            </div>
+        </div>
+    </section>
+    <form id="myForm">
+        <table>
+            <tr>
+                <td><label for="nama">Nama </label></td>
+                <td>: <input type="text" id="nama" name="nama"></td>
+            </tr>
+        <br>
+            <tr>
+                <td><label for="tanggal">Tanggal </label></td>
+                <td>: <input type="date" id="tanggal" name="tanggal"></td>
+            </tr>
+        <br>
+            <tr>
+                <td>Jenis kelamin</td>
+                <td>: <input type="radio" id="laki-laki" name="kelamin" value="laki-laki">
+                    <label for="laki-laki">Laki-laki</label>
+                    
+                    <input type="radio" id="perempuan" name="kelamin" value="perempuan">
+                    <label for="perempuan">Perempuan</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Pesan :</td>
+                <td><input type="text" id="pesan" name="pesan" style="height: 100px; width: 200px;"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="Submit" onclick="tampilkanHasil()"></td>
+            </tr>
+    </table>
+    </form>
+    <div id="hasilBox">
+        <table border="1">
+            <tr>
+                <th>Nama</th>
+                <th>Tanggal</th>
+                <th>Pesan</th>
+            </tr>
+            <tr>
+                <td id="hasilNama"></td>
+                <td id="hasilTanggal"></td>
+                <td id="hasilPesan"></td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        function tampilkanHasil() {
+            var nama = document.getElementById("nama").value;
+            var tanggal = document.getElementById("tanggal").value;
+            var pesan = document.getElementById("pesan").value;
+            document.getElementById("hasilNama").innerHTML = nama;
+            document.getElementById("hasilTanggal").innerHTML = tanggal;
+            document.getElementById("hasilPesan").innerHTML = pesan;
+        }
+    </script>
+
+    <div class="form-right"></div>
+    </section>
+    <footer class="footer">
+            <p class="footer-text">made by Krisss</p>
+     </footer>
+    <script src="./js/script.js"></script>
+</body>
+</html>
